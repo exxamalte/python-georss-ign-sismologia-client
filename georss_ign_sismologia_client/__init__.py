@@ -1,7 +1,7 @@
 """
 IGN Instituto Geográfico Nacional Sismología Feed.
 
-Fetches GeoRSS feed from ING Instituto Geográfico Nacional Sismología.
+Fetches GeoRSS feed from IGN Instituto Geográfico Nacional Sismología.
 """
 from datetime import datetime
 import dateparser as dateparser
