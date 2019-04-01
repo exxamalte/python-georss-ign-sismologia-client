@@ -4,13 +4,13 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 REQUIRES = [
-    'georss_client>=0.8',
+    'georss_client>=0.9',
     'dateparser>=0.7.0',
 ]
 
 setup(
     name="georss_ign_sismologia_client",
-    version="0.1",
+    version="0.2",
     author="Malte Franken",
     author_email="coding@subspace.de",
     description="A GeoRSS client library for the IGN Sismologia feed.",
