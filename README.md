@@ -43,6 +43,24 @@ feed = IgnSismologiaFeed((40.38, -3.72),
 status, entries = feed.update()
 ```
 
+## Feed entry properties
+Each feed entry is populated with the following properties - subject to 
+availability in GeoRSS feed:
+
+| Name             | Description                                               |
+|------------------|-----------------------------------------------------------|
+| geometry         | All geometry details of this entry.                       |
+| coordinates      | Best coordinates (latitude, longitude) of this entry.     |
+| external_id      | External id of this entry.                                |
+| title            | Title of this entry with date and time of the event.      |
+| attribution      | Attribution of the feed.                                  |
+| distance_to_home | Distance in km of this entry to the home coordinates.     |
+| description      | Textual description of this entry.                               |
+| published        | Published date of this entry.                             |
+| magnitude        | Magnitude value of this entry.                            |
+| region           | Region in formation of this entry.                        |
+| image_url        | Image URL showing a map of the entry.                     |
+
 ## Feed Manager
 
 The Feed Manager helps managing feed updates over time, by notifying the 
