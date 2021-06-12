@@ -4,12 +4,12 @@ import unittest
 from unittest import mock
 
 from georss_client import UPDATE_OK
+
 from georss_ign_sismologia_client import (
-    IgnSismologiaFeed,
     ATTRIBUTION,
+    IgnSismologiaFeed,
     IgnSismologiaFeedManager,
 )
-
 from tests import load_fixture
 
 HOME_COORDINATES = (40.38, -3.72)

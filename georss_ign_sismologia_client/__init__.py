@@ -4,11 +4,10 @@ IGN Instituto Geográfico Nacional Sismología Feed.
 Fetches GeoRSS feed from IGN Instituto Geográfico Nacional Sismología.
 """
 from datetime import datetime
-import dateparser as dateparser
-
 from typing import Optional
 
-from georss_client import GeoRssFeed, FeedEntry
+import dateparser as dateparser
+from georss_client import FeedEntry, GeoRssFeed
 from georss_client.consts import CUSTOM_ATTRIBUTE
 from georss_client.feed_manager import FeedManagerBase
 
