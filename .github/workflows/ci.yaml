@@ -26,6 +26,7 @@ jobs:
         run: |
           set -xe
           python -VV
+          python -m site
           python -m pip install --upgrade pip setuptools wheel
           python -m pip install --upgrade coverage[toml] virtualenv tox tox-gh-actions
       - name: "Run tox targets for ${{ matrix.python-version }}"
@@ -34,7 +35,6 @@ jobs:
         if: "contains(env.USING_COVERAGE, matrix.python-version)"
         run: |
           set -xe
-          python -m coverage combine
           python -m coverage xml
       - name: "Upload coverage to Codecov"
         if: "contains(env.USING_COVERAGE, matrix.python-version)"
