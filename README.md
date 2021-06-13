@@ -1,7 +1,7 @@
 # python-georss-ign-sismologia-client
 
-[![Build Status](https://travis-ci.org/exxamalte/python-georss-ign-sismologia-client.svg)](https://travis-ci.org/exxamalte/python-georss-ign-sismologia-client)
-[![Coverage Status](https://coveralls.io/repos/github/exxamalte/python-georss-ign-sismologia-client/badge.svg?branch=master)](https://coveralls.io/github/exxamalte/python-georss-ign-sismologia-client?branch=master)
+[![Build Status](https://github.com/exxamalte/python-georss-ign-sismologia-client/workflows/CI/badge.svg?branch=master)](https://github.com/exxamalte/python-georss-ign-sismologia-client/actions?workflow=CI)
+[![codecov](https://codecov.io/gh/exxamalte/python-georss-ign-sismologia-client/branch/master/graph/badge.svg?token=FL77ISIDZ3)](https://codecov.io/gh/exxamalte/python-georss-ign-sismologia-client)
 [![PyPi](https://img.shields.io/pypi/v/georss-ign-sismologia-client.svg)](https://pypi.python.org/pypi/georss-ign-sismologia-client)
 [![Version](https://img.shields.io/pypi/pyversions/georss-ign-sismologia-client.svg)](https://pypi.python.org/pypi/georss-ign-sismologia-client)
 
