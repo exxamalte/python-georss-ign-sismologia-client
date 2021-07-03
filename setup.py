@@ -10,7 +10,7 @@ REQUIRES = [
 
 setup(
     name="georss_ign_sismologia_client",
-    version="0.3",
+    version="0.4",
     author="Malte Franken",
     author_email="coding@subspace.de",
     description="A GeoRSS client library for the IGN Sismologia feed.",
