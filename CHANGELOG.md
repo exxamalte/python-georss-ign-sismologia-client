@@ -1,7 +1,7 @@
 # Changes
 
 ## 0.4 (03/07/2021)
-* Excluded tests from package.
+* Excluded tests from package (thanks @onkelbeh).
 
 ## 0.3 (13/06/2021)
 * Added Python 3.8 support.
