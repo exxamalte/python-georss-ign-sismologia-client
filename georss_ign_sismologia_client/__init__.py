@@ -110,7 +110,7 @@ class IgnSismologiaFeedEntry(FeedEntry):
         """Return the published date of this entry."""
         published_date = self._search_in_title(REGEXP_ATTR_PUBLISHED_DATE)
         if published_date:
-            published_date = dateparser.parse(published_date)
+            published_date = dateparser.parse(published_date, settings={'DATE_ORDER': 'DMY', 'PREFER_LOCALE_DATE_ORDER': False})
         return published_date
 
     @property
