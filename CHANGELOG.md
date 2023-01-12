@@ -1,5 +1,9 @@
 # Changes
 
+## 0.6 (13/01/2023)
+* Fixed publication date where day and month were accidentally swapped in certain cases (thanks @joaopedrotaveira).
+* Added more test cases.
+
 ## 0.5 (17/02/2022)
 * No functional changes.
 * Added Python 3.10 support.
