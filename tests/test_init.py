@@ -37,7 +37,7 @@ class TestIgnSismologiaFeed(unittest.TestCase):
         status, entries = feed.update()
         assert status == UPDATE_OK
         self.assertIsNotNone(entries)
-        assert len(entries) == 3
+        assert len(entries) == 4
 
         feed_entry = entries[0]
         assert feed_entry.title == "-Info.terremoto: 18/03/2019 19:34:55"
@@ -74,6 +74,10 @@ class TestIgnSismologiaFeed(unittest.TestCase):
         self.assertIsNone(feed_entry.region)
         self.assertIsNone(feed_entry.magnitude)
         self.assertIsNone(feed_entry.published)
+
+        # Check for date order (day vs. month)
+        feed_entry = entries[3]
+        assert feed_entry.published == datetime.datetime(2018, 11, 10, 2, 34, 56)
 
     @mock.patch("requests.Request")
     @mock.patch("requests.Session")
@@ -148,8 +152,8 @@ class TestIgnSismologiaFeed(unittest.TestCase):
         feed_manager.update()
         entries = feed_manager.feed_entries
         self.assertIsNotNone(entries)
-        assert len(entries) == 3
+        assert len(entries) == 4
         assert feed_manager.last_timestamp == datetime.datetime(2019, 3, 18, 19, 34, 55)
-        assert len(generated_entity_external_ids) == 3
+        assert len(generated_entity_external_ids) == 4
         assert len(updated_entity_external_ids) == 0
         assert len(removed_entity_external_ids) == 0
