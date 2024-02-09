@@ -1,12 +1,8 @@
-"""
-IGN Instituto Geográfico Nacional Sismología Feed.
-
-Fetches GeoRSS feed from IGN Instituto Geográfico Nacional Sismología.
-"""
+"""IGN Instituto Geográfico Nacional Sismología Feed. Fetches GeoRSS feed from IGN Instituto Geográfico Nacional Sismología."""
 from datetime import datetime
 from typing import Optional
 
-import dateparser as dateparser
+import dateparser
 from georss_client import FeedEntry, GeoRssFeed
 from georss_client.consts import CUSTOM_ATTRIBUTE
 from georss_client.feed_manager import FeedManagerBase
@@ -18,15 +14,15 @@ IMAGE_URL_PATTERN = (
     "dir_images_terremotos/detalle/{}.gif"
 )
 
-REGEXP_ATTR_MAGNITUDE = r"magnitud (?P<{}>[^ ]+) ".format(CUSTOM_ATTRIBUTE)
+REGEXP_ATTR_MAGNITUDE = rf"magnitud (?P<{CUSTOM_ATTRIBUTE}>[^ ]+) "
 REGEXP_ATTR_REGION = r"magnitud [^ ]+ en (?P<{}>[A-ZÁÉÓÜÑ0-9 \-\.]+) en".format(
     CUSTOM_ATTRIBUTE
 )
-REGEXP_ATTR_PUBLISHED_DATE = r"-Info.terremoto: (?P<{}>.+)$".format(CUSTOM_ATTRIBUTE)
+REGEXP_ATTR_PUBLISHED_DATE = rf"-Info.terremoto: (?P<{CUSTOM_ATTRIBUTE}>.+)$"
 REGEXP_ATTR_SHORT_ID = (
     r"http:\/\/www\.ign\.es\/web\/ign\/portal\/"
     r"sis-catalogo-terremotos\/-\/catalogo-terremotos\/"
-    r"detailTerremoto\?evid=(?P<{}>\w+)$".format(CUSTOM_ATTRIBUTE)
+    rf"detailTerremoto\?evid=(?P<{CUSTOM_ATTRIBUTE}>\w+)$"
 )
 
 URL = "http://www.ign.es/ign/RssTools/sismologia.xml"
@@ -110,7 +106,10 @@ class IgnSismologiaFeedEntry(FeedEntry):
         """Return the published date of this entry."""
         published_date = self._search_in_title(REGEXP_ATTR_PUBLISHED_DATE)
         if published_date:
-            published_date = dateparser.parse(published_date, settings={'DATE_ORDER': 'DMY', 'PREFER_LOCALE_DATE_ORDER': False})
+            published_date = dateparser.parse(
+                published_date,
+                settings={"DATE_ORDER": "DMY", "PREFER_LOCALE_DATE_ORDER": False},
+            )
         return published_date
 
     @property
