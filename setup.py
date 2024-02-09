@@ -11,7 +11,7 @@ URL = "https://github.com/exxamalte/python-georss-ign-sismologia-client"
 
 REQUIRES = [
     "georss_client>=0.15",
-    "dateparser>=0.7.0",
+    "dateparser>=1.2.0",
 ]
 
 with open("README.md") as fh:
