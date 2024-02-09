@@ -5,7 +5,8 @@ from datetime import datetime
 from typing import Final
 
 import dateparser
-from georss_client import CUSTOM_ATTRIBUTE, FeedEntry
+from georss_client.consts import CUSTOM_ATTRIBUTE
+from georss_client.feed_entry import FeedEntry
 
 ATTRIBUTION: Final = "Instituto Geográfico Nacional"
 IMAGE_URL_PATTERN: Final = (

@@ -1,11 +1,13 @@
 """IGN Sismología feed."""
 from __future__ import annotations
 
-from georss_client import GeoRssFeed
+from typing import Final
+
+from georss_client.feed import GeoRssFeed
 
 from .feed_entry import IgnSismologiaFeedEntry
 
-URL = "http://www.ign.es/ign/RssTools/sismologia.xml"
+URL: Final = "http://www.ign.es/ign/RssTools/sismologia.xml"
 
 
 class IgnSismologiaFeed(GeoRssFeed):
