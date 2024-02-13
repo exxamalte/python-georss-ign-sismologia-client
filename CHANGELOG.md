@@ -1,5 +1,8 @@
 # Changes
 
+## 0.8 (14/02/2024)
+* Fix list of supported Python versions.
+
 ## 0.7 (14/02/2024)
 * Bumped version of upstream [python-georss-client](https://github.com/exxamalte/python-georss-client) library to v0.17 that fixes a backwards compatibility issue with a fault in v0.16.
 * Added Python 3.11 support.
