@@ -1,4 +1,5 @@
 """IGN Sismología feed manager."""
+
 from __future__ import annotations
 
 from georss_client.feed_manager import FeedManagerBase

@@ -1,4 +1,5 @@
 """IGN Sismología feed entry."""
+
 from __future__ import annotations
 
 from datetime import datetime
@@ -14,8 +15,8 @@ IMAGE_URL_PATTERN: Final = (
     "dir_images_terremotos/detalle/{}.gif"
 )
 REGEXP_ATTR_MAGNITUDE: Final = rf"magnitud (?P<{CUSTOM_ATTRIBUTE}>[^ ]+) "
-REGEXP_ATTR_REGION: Final = r"magnitud [^ ]+ en (?P<{}>[A-ZÁÉÓÜÑ0-9 \-\.]+) en".format(
-    CUSTOM_ATTRIBUTE
+REGEXP_ATTR_REGION: Final = (
+    rf"magnitud [^ ]+ en (?P<{CUSTOM_ATTRIBUTE}>[A-ZÁÉÓÜÑ0-9 \-\.]+) en"
 )
 REGEXP_ATTR_PUBLISHED_DATE: Final = rf"-Info.terremoto: (?P<{CUSTOM_ATTRIBUTE}>.+)$"
 REGEXP_ATTR_SHORT_ID: Final = (
@@ -49,7 +50,7 @@ class IgnSismologiaFeedEntry(FeedEntry):
         return published_date
 
     @property
-    def magnitude(self) -> float | float:
+    def magnitude(self) -> float:
         """Return the magnitude of this entry."""
         magnitude = self._search_in_description(REGEXP_ATTR_MAGNITUDE)
         if magnitude:

@@ -1,4 +1,5 @@
 """Test the IGN Instituto Geográfico Nacional Sismología feed manager."""
+
 import datetime
 from unittest import mock
 
