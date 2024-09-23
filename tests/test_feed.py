@@ -1,9 +1,10 @@
 """Test the IGN Instituto Geográfico Nacional Sismología feed."""
+
 import datetime
 from unittest import mock
 
-import pytest
 from georss_client import UPDATE_OK
+import pytest
 
 from georss_ign_sismologia_client import IgnSismologiaFeed
 from georss_ign_sismologia_client.feed_entry import ATTRIBUTION
