@@ -1,2 +1,2 @@
 georss_client>=0.19
-dateparser>=1.2.0
+dateparser>=1.4.0
