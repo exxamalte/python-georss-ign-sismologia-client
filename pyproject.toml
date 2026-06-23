@@ -1,3 +1,48 @@
+[build-system]
+requires = [
+    "setuptools",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "georss_ign_sismologia_client"
+version  = "0.8"
+requires-python = ">= 3.11"
+authors = [
+  {name = "Malte Franken", email = "coding@subspace.de"},
+]
+description = "A GeoRSS client library for the IGN Sismologia feed."
+readme = "README.md"
+license = "Apache-2.0"
+keywords = ["homeassistant", "georss", "ign", "sismologia"]
+classifiers = [
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: OS Independent",
+  "Development Status :: 5 - Production/Stable",
+]
+dependencies = [
+    "georss_client>=0.17",
+    "dateparser>=1.2.0",
+]
+
+[project.optional-dependencies]
+tests = [
+    "pytest",
+    "pytest-timeout",
+    "pytest-xdist",
+    "pytest-cov",
+]
+
+[project.urls]
+Repository = "https://github.com/exxamalte/python-georss-ign-sismologia-client"
+Issues = "https://github.com/exxamalte/python-georss-ign-sismologia-client/issues"
+Changelog = "https://github.com/exxamalte/python-georss-ign-sismologia-client/blob/master/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+include = ["georss_ign_sismologia_client*"]
+
 [tool.ruff.lint]
 select = [
     "A001", # Variable {name} is shadowing a Python builtin
