@@ -25,7 +25,7 @@ classifiers = [
   "Development Status :: 5 - Production/Stable",
 ]
 dependencies = [
-    "georss_client>=0.17",
+    "georss_client>=2026.6.0",
     "dateparser>=1.4.1",
 ]
 
