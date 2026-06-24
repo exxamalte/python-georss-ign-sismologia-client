@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "georss_ign_sismologia_client"
-version  = "0.8"
+version  = "2026.6.0"
 requires-python = ">= 3.11"
 authors = [
   {name = "Malte Franken", email = "coding@subspace.de"},
