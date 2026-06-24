@@ -26,7 +26,7 @@ classifiers = [
 ]
 dependencies = [
     "georss_client>=0.17",
-    "dateparser>=1.2.0",
+    "dateparser>=1.4.1",
 ]
 
 [project.optional-dependencies]
